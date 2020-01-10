@@ -6,3 +6,7 @@ test("empty data", () => {
 test("with a", () => {
   expect(nestedAccordion({ a: "a" })).toBe('{"a":"a"}');
 });
+
+test("with ab", () => {
+  expect(nestedAccordion({ a: "a" })).toBe('{"a":"b"}');
+});
