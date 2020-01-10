@@ -10,7 +10,7 @@ Generates a series of nested css accordions from a json datafile
 ## Install
 
 ```
-$ npm i nested-accordion
+$ yarn add nested-accordion
 ```
 
 ## Usage
