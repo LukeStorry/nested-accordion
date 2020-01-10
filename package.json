@@ -1,6 +1,6 @@
 {
   "name": "nested-accordion",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "Generates a series of nested css accordions from a json datafile",
   "main": "src/index.js",
   "author": {
@@ -12,7 +12,9 @@
     "clean": "rimraf coverage build tmp",
     "build": "tsc -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint"
   },
   "repository": "LukeStorry/nested-accordion",
   "keywords": [
@@ -39,16 +41,18 @@
     "tslib": "~1.10.0"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.25",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "~6.9.0",
     "eslint-plugin-jest": "~23.2.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "jest": "~24.9.0",
+    "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "~1.19.1",
     "rimraf": "~3.0.0",
-    "ts-jest": "~24.2.0",
-    "typescript": "~3.7.4"
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.4"
   }
 }

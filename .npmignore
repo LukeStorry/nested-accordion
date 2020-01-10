@@ -2,8 +2,11 @@ src
 tests
 .editorconfig
 .eslintrc.json
-.travis.yml
 .prettierrc
+jest.config.js
+.travis.yml
+
+.idea
 .github
 **/*.test.*
 coverage
