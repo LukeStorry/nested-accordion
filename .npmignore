@@ -1,0 +1,12 @@
+src
+tests
+.editorconfig
+.eslintrc.json
+.travis.yml
+.prettierrc
+.github
+**/*.test.*
+coverage
+*.log
+tsconfig.json
+tsconfig.release.json
