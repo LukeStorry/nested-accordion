@@ -1,3 +1,14 @@
-export const generateHtml = function(data = {}): string {
-  return `<h1>Accordion</h1>${JSON.stringify(data)}`
-}
+import generateHtml, { SectionData } from './generateHtml';
+import style from './style';
+import addClickHandlersScript from './addClickHandlersScript';
+
+export const create = (data: Array<SectionData>): string =>
+  `<!-- AUTO-GENERATED ACCORDION CODE USING https://lukestorry.github.io/nested-accordion -->` +
+  generateHtml(data) +
+  addClickHandlersScript +
+  `<!-- END OF AUTO-GENERATED ACCORDION CODE -->`;
+
+export const styles = (
+  activeColour = 'grey',
+  inactiveColor = 'lightgrey',
+): string => style(activeColour, inactiveColor);
