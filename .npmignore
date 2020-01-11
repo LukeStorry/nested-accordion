@@ -5,7 +5,7 @@ tests
 .prettierrc
 jest.config.js
 .travis.yml
-
+dist
 .idea
 .github
 **/*.test.*
