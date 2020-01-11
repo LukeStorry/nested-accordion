@@ -27,8 +27,7 @@ const createSection = (sectionData: SectionData): string => {
 };
 
 export default (data: Array<SectionData>): string => {
-  return `
-  <div id="nested-accordion">
-  ${data.map(createSection).join('\n')}
-  </div>`;
+  return `<div id="nested-accordion">\n${data
+    .map(createSection)
+    .join('\n')}\n</div>`;
 };

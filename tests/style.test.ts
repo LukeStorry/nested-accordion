@@ -1,12 +1,11 @@
-export default (
-  activeColour: string,
-  inactiveColor: string,
-  textColor: string,
-): string =>
-  `.header {
+import style from '../src/style';
+
+describe('styles', () => {
+  test('sets colors correctly', () => {
+    const expectedOutput = `.header {
   border: 0;
-  background-color: ${inactiveColor};
-  color: ${textColor};
+  background-color: #abcdef;
+  color: yellow;
   display: block;
   cursor: pointer;
   padding: 1rem;
@@ -16,20 +15,20 @@ export default (
 }
 
 .header.active {
-  color: ${textColor};
+  color: yellow;
   margin-top: 1rem;
-  background-color: ${activeColour};
+  background-color: blue;
 }
 
 .header:hover {
-  color: ${textColor};
-  background-color: ${activeColour};
+  color: yellow;
+  background-color: blue;
 }
 
 .header.disabled, .header.disabled:hover {
-  background-color: ${inactiveColor};
+  background-color: #abcdef;
   cursor: auto;
-  color: ${activeColour};
+  color: blue;
   font-style: italic;
 }
 
@@ -42,6 +41,11 @@ export default (
   padding: 1rem 2rem 1rem 2rem;
   background-color: white;
   border-style: solid;
-  border-color: ${activeColour};
+  border-color: blue;
   margin: 0 -1.5rem 1rem -1.5rem;
 }`;
+    expect(style('blue', '#abcdef', 'yellow')).toBe(expectedOutput);
+  });
+
+  // TODO test for incorrect color strings throws
+});
