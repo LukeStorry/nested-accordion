@@ -13,7 +13,7 @@
     "build": "tsc",
     "lint": "eslint . --ext .ts,.tsx --fix",
     "test": "jest",
-    "pprepublishOnly": "npm clean && npm build && npm run lint"
+    "prepublishOnly": "yarn clean && yarn build && yarn version --patch"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
