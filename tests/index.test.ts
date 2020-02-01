@@ -8,9 +8,6 @@ describe('create', () => {
 <div id="nested-accordion">
 
 </div>
-<script id="nestedAccordionClickHandlersScript">
-var headers = document.getElementsByClassName("header");for (let i = 0; i < headers.length; i++) {if (headers[i].classList.contains('disabled')) continue;headers[i].addEventListener("click", function() {this.classList.toggle("active");this.nextElementSibling.classList.toggle("active");});headers[i].addEventListener('keydown', function(event) {if (event.code === 'Space' || event.code === 'Enter') {headers[i].click();}});}
-</script>
 <!-- END OF AUTO-GENERATED ACCORDION CODE -->`;
 
     expect(create([])).toBe(expectedOutput);
@@ -30,9 +27,6 @@ var headers = document.getElementsByClassName("header");for (let i = 0; i < head
 
     const expectedOutput = `<!-- AUTO-GENERATED ACCORDION CODE USING https://lukestorry.github.io/nested-accordion -->
 ${generateHtml(testData)}
-<script id="nestedAccordionClickHandlersScript">
-var headers = document.getElementsByClassName("header");for (let i = 0; i < headers.length; i++) {if (headers[i].classList.contains('disabled')) continue;headers[i].addEventListener("click", function() {this.classList.toggle("active");this.nextElementSibling.classList.toggle("active");});headers[i].addEventListener('keydown', function(event) {if (event.code === 'Space' || event.code === 'Enter') {headers[i].click();}});}
-</script>
 <!-- END OF AUTO-GENERATED ACCORDION CODE -->`;
 
     expect(create(testData)).toBe(expectedOutput);

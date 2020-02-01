@@ -34,11 +34,6 @@ export default (
 }
 
 .contents {
-  display: none;
-}
-
-.contents.active {
-  display: block;
   padding: 1rem 2rem 1rem 2rem;
   background-color: white;
   border-style: solid;

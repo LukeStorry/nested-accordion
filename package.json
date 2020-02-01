@@ -1,19 +1,19 @@
 {
   "name": "nested-accordion",
-  "version": "1.0.1",
+  "version": "1.2.4",
   "description": "Generates a series of nested css accordions from a json datafile",
   "repository": "LukeStorry/nested-accordion",
   "author": {
     "name": "LukeStorry",
-    "email": "luke@lukestorry.co.uk@gmail.com",
+    "email": "luke@lukestorry.co.uk",
     "url": "https://github.com/lukestorry"
   },
   "scripts": {
     "clean": "rimraf coverage dist",
     "build": "tsc",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx --fix",
     "test": "jest",
-    "prepublishOnly": "npm build && npm run lint --fix && npm test"
+    "prepublishOnly": "npm build && npm run lint && npm test"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
