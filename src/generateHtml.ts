@@ -6,11 +6,7 @@ export type SectionData = {
 
 const createHeader = (title: string, enabled: boolean): string => {
   if (enabled)
-    return `<a class="header" tabindex="0"
-    onclick="this.classList.toggle('active'); this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'? 'block':'none';"
-    >
-    ${title}
-    </a>`;
+    return `<a class="header" tabindex="0" onclick="this.classList.toggle('active'); this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'? 'block':'none';">${title}</a>`;
   else return `<a class="header disabled">${title}</a>`;
 };
 
