@@ -3,7 +3,11 @@ export default (
   inactiveColor: string,
   textColor: string,
 ): string =>
-  `.header {
+  `#nested-accordion{
+    margin: 1rem
+  }
+  
+  .header {
   border: 0;
   background-color: ${inactiveColor};
   color: ${textColor};
