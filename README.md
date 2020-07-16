@@ -5,7 +5,7 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/lukestorry/nested-accordion/master.svg)](https://codecov.io/gh/lukestorry/nested-accordion/branch/master)
 [![install size](https://packagephobia.now.sh/badge?p=nested-accordion)](https://packagephobia.now.sh/result?p=nested-accordion)
 
-Generates a series of nested css accordions from a json datafile
+Generates a series of nested accordions (using the details/summary elements) from a json datafile
 
 ---
 

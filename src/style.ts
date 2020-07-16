@@ -3,44 +3,42 @@ export default (
   inactiveColor: string,
   textColor: string,
 ): string =>
-  `#nested-accordion{
-    margin: 1rem
-  }
-  
-  .header {
-  border: 0;
-  background-color: ${inactiveColor};
+  `  
+#nested-accordion details[open] {
+  border-style: solid;
+  border-color: ${activeColour};
+}
+
+#nested-accordion summary {
   color: ${textColor};
-  display: block;
+  background-color: ${inactiveColor};
   cursor: pointer;
   padding: 1rem;
-  margin: -0.5rem -1.5rem 0 -1.5rem;
   font-weight: bold;
-  text-align: center;
 }
 
-.header.active {
-  color: ${textColor};
-  margin-top: 1rem;
+#nested-accordion summary:hover, #nested-accordion summary:focus, #nested-accordion details[open] > summary {
   background-color: ${activeColour};
 }
 
-.header:hover {
-  color: ${textColor};
-  background-color: ${activeColour};
-}
-
-.header.disabled, .header.disabled:hover {
+#nested-accordion details.empty summary {
   background-color: ${inactiveColor};
   cursor: auto;
   color: ${activeColour};
   font-style: italic;
+  list-style: none;
+  padding-left: 2rem;
 }
 
-.contents {
-  padding: 1rem 2rem 1rem 2rem;
-  background-color: white;
-  border-style: solid;
-  border-color: ${activeColour};
-  margin: 0 -1.5rem 1rem -1.5rem;
-}`;
+#nested-accordion details.empty summary::-webkit-details-marker {
+  display:none;
+}
+
+#nested-accordion details > p {
+  padding: 1rem;
+}
+
+#nested-accordion details > div {
+  padding: 0.5rem;
+}
+`;
