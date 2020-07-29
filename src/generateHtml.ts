@@ -13,7 +13,14 @@ const createSection = (sectionData: SectionData): string => {
     !hasText && !hasChildren ? 'class="empty" tabindex="-1"' : ''
   }>
 <summary>${sectionData.title}</summary>
-${hasText ? `<p class="info">${sectionData.text}</p>` : ''}
+${
+  hasText
+    ? sectionData.text
+        .split('\n\n')
+        .map((t) => `<p>${t}</p>`)
+        .join('\n')
+    : ''
+}
 ${
   hasChildren
     ? `<div>${sectionData.children.map(createSection).join('\n')}</div>`
